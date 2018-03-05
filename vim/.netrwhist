@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/tnek/HSF-2017-Prelims/Tier 1/Crypto/Encodings'
-let g:netrw_dirhist_2='/Users/tnek/CSAW-CTF-2017-Quals/rev/realism'
-let g:netrw_dirhist_3='/Users/tnek/flag.txt'
-let g:netrw_dirhist_4='/Users/tnek/HSF-2017-Prelims/Tier 1/Clearsoc_Website/forum/static'
-let g:netrw_dirhist_5='/Users/tnek/HSF-2017-Prelims/Tier 1/Clearsoc_Website/forum/static/css'
-let g:netrw_dirhist_6='/Users/tnek/HSF-2017-Prelims/rtkit/rootkit'
-let g:netrw_dirhist_7='/home/sai/github/ctf/CTF/OffSec/pwn/inspec'
