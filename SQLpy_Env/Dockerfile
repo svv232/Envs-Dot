@@ -8,8 +8,8 @@ RUN apt-get update && apt-get install -y \
     vim \
 	build-essential \
 	curl \
-	python3 \
-	python3-dev \
+	python \
+	python-dev \
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
