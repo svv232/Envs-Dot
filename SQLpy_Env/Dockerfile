@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
 	build-essential \
 	curl \
 	python \
+    socat \
 	python-dev
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
@@ -21,4 +22,5 @@ ADD . /app
 
 RUN chmod +x setup.sh
 
-RUN ./setup.sh
+EXPOSE 1234
+ENTRYPOINT ["socat", "TCP-LISTEN:6789,reuseaddr,fork","EXEC:/app/bash"]
