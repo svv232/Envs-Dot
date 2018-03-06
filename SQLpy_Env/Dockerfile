@@ -9,18 +9,16 @@ RUN apt-get update && apt-get install -y \
 	build-essential \
 	curl \
 	python \
-	python-dev \
+	python-dev
 
 RUN curl -O https://bootstrap.pypa.io/get-pip.py && \
     python get-pip.py && \
-		rm get-pip.py
-
-
-RUN apt-get install mysql-server \
-    mysql_secure_installation
+	rm get-pip.py
 
 #user
 WORKDIR /app
 ADD . /app
 
-RUN source /virtualenv/bin/activate
+RUN chmod +x setup.sh
+
+RUN ./setup.sh
