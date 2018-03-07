@@ -23,4 +23,4 @@ ADD . /app
 RUN chmod +x setup.sh
 
 EXPOSE 1234
-ENTRYPOINT ["socat", "TCP-LISTEN:6789,reuseaddr,fork","EXEC:/app/bash"]
+ENTRYPOINT ["socat", "TCP-LISTEN:6789,reuseaddr,fork","EXEC:/app/ . ./setup.sh"]
