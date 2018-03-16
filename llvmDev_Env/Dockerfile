@@ -10,8 +10,6 @@ RUN apt-get update && apt-get install -y \
     git && \
     useradd -m llvm-man
 
-ADD Insanity /home/llvm-man
-
 USER llvm-man
 WORKDIR /home/llvm-man
 ENV HOME /home/llvm-man
