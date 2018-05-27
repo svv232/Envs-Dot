@@ -115,9 +115,26 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+########################### MY_STUFF ################################
+PROJ="1nsanity";
+EDITOR="vim";
+
+function cd {
+    builtin cd "$@" && ls
+}
+
+function vpn_on {
+    sudo openvpn osiris.ovpn;
+    cd -;
+}
 
 PATH=$PATH:/apps/binaryninja:/apps/pwndbg
+alias pip="python -m pip"
 alias ctfbox="ssh sai@ctf-tools.osiris.cyber.nyu.edu"
 alias obelisk="ssh sai@obelisk.isis.poly.edu"
-
-
+alias binja="binaryninja"
+alias py3env=". ~/virtualenvs/virtualenv/bin/activate"
+alias rc="vim ~/.bashrc"
+alias proj="cd ~/github/$PROJ"
+alias vpn="cd ~/Downloads/VPN "
+alias e=$EDITOR
